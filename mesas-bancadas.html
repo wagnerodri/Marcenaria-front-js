@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesas & Bancadas - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="../css-universal-modal.css" rel="stylesheet">
+    <style>
+        /* Fix para dropdown navigation */
+        .navbar-nav .dropdown-menu {
+            z-index: 1050 !important;
+            position: absolute !important;
+        }
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+        .dropdown-toggle::after {
+            border-top: 0.3em solid !important;
+            border-right: 0.3em solid transparent !important;
+            border-bottom: 0 !important;
+            border-left: 0.3em solid transparent !important;
+        }
+        .dropdown-item:hover {
+            background-color: #1a1a2e !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item active" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-table me-3 text-warning"></i>
+                        Mesas & Bancadas Sob Medida
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Superfícies funcionais e elegantes para trabalho, refeições e convívio. Materiais nobres, acabamentos premium e design que transforma qualquer ambiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Mesas & Bancadas -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Mesas & Bancadas</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, dimensões e especificações técnicas</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Mesa de Jantar -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mesa de Jantar" class="gallery-img">
+                            <div class="material-badge">Madeira Maciça</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mesa de Jantar Premium</h5>
+                            <p class="card-text">Mesa em madeira nobre maciça com acabamento artesanal premium, ideal para reunir família e amigos em momentos especiais.</p>
+                            <div class="price-tag">A partir de R$ 5.800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesa de Centro -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mesa de Centro" class="gallery-img">
+                            <div class="material-badge">Vidro + Madeira</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mesa de Centro Design</h5>
+                            <p class="card-text">Design moderno combinando vidro temperado e madeira selecionada, perfeita para salas contemporâneas e ambientes elegantes.</p>
+                            <div class="price-tag">A partir de R$ 2.400</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bancada Cozinha -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bancada Cozinha" class="gallery-img">
+                            <div class="material-badge">Quartzito + Granito</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bancada de Cozinha</h5>
+                            <p class="card-text">Superfície resistente em quartzito ou granito, ideal para preparo de alimentos com durabilidade e beleza excepcional.</p>
+                            <div class="price-tag">A partir de R$ 4.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesa de Trabalho -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mesa de Trabalho" class="gallery-img">
+                            <div class="material-badge">MDF + Laminado</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mesa de Trabalho Ergonômica</h5>
+                            <p class="card-text">Superfície ampla e ergonômica para atividades profissionais, com organização para cabos e acessórios de escritório.</p>
+                            <div class="price-tag">A partir de R$ 3.600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bancada Banheiro -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bancada Banheiro" class="gallery-img">
+                            <div class="material-badge">Mármore + Porcelanato</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bancada de Banheiro</h5>
+                            <p class="card-text">Elegância e funcionalidade em mármore ou porcelanato, resistente à umidade com design sofisticado e moderno.</p>
+                            <div class="price-tag">A partir de R$ 3.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mesa Lateral -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mesa Lateral" class="gallery-img">
+                            <div class="material-badge">Metal + Madeira</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mesa Lateral Versátil</h5>
+                            <p class="card-text">Peça de apoio versátil combinando metal e madeira, perfeita para complementar sofás e poltronas com estilo.</p>
+                            <div class="price-tag">A partir de R$ 1.800</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Especialidade:</strong> Superfícies que conectam pessoas</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <p class="text-center mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        // Fix para dropdown navigation - garantir funcionamento
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar dropdowns do Bootstrap
+            const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
+            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl));
+            
+            // Adicionar evento hover para melhor UX
+            const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', function() {
+                    const dropdownToggle = this.querySelector('.dropdown-toggle');
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownToggle && dropdownMenu) {
+                        dropdownMenu.classList.add('show');
+                        dropdownToggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    const dropdownToggle = this.querySelector('.dropdown-toggle');
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownToggle && dropdownMenu) {
+                        dropdownMenu.classList.remove('show');
+                        dropdownToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+            
+            // Garantir que links funcionem
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+        
+        const mesasData = {
+            'mesa-jantar': {
+                title: 'Mesa de Jantar',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 5.800',
+                description: 'Mesa de jantar em madeira nobre com acabamento premium, projetada para reunir família e amigos em momentos especiais e criar memórias duradouras.',
+                materials: [
+                    'Tampo em madeira ipê maciço 4cm',
+                    'Verniz poliuretano premium',
+                    'Base em madeira torneada',
+                    'Tratamento anti-cupim',
+                    'Acabamento encerado natural',
+                    'Estrutura reforçada aparafusada',
+                    'Pés com proteção para piso',
+                    'Resistência até 150kg'
+                ],
+                includes: [
+                    'Mesa 2,20m x 1,00m (8 lugares)',
+                    'Tampo espessura 4cm',
+                    'Base central robusta',
+                    'Kit proteção para piso',
+                    'Manual de conservação',
+                    'Cera para manutenção',
+                    'Garantia estrutural',
+                    'Entrega e montagem'
+                ],
+                warranty: '5 anos madeira maciça',
+                delivery: '50 a 65 dias úteis'
+            },
+            'mesa-centro': {
+                title: 'Mesa de Centro',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 2.400',
+                description: 'Design moderno combinando vidro temperado e madeira, criando um ponto focal elegante para salas contemporâneas.',
+                materials: [
+                    'Tampo vidro temperado 12mm',
+                    'Base em madeira freijó tratada',
+                    'Bordas polidas e bisotadas',
+                    'Estrutura metálica oculta',
+                    'Ventosas antiderrapantes',
+                    'Acabamento verniz acetinado',
+                    'Proteção UV anti-amarelamento'
+                ],
+                includes: [
+                    'Mesa 1,20m x 0,70m',
+                    'Tampo vidro temperado',
+                    'Base madeira + metal',
+                    'Ventosas de proteção',
+                    'Kit limpeza vidro',
+                    'Manual de cuidados',
+                    'Instalação incluída'
+                ],
+                warranty: '3 anos vidro temperado',
+                delivery: '25 a 35 dias úteis'
+            },
+            'bancada-cozinha': {
+                title: 'Bancada de Cozinha',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 4.200',
+                description: 'Superfície resistente em quartzito ou granito para preparo de alimentos, combinando durabilidade, higiene e beleza natural.',
+                materials: [
+                    'Quartzito Branco Dallas 3cm',
+                    'Borda reta polida',
+                    'Tratamento impermeabilizante',
+                    'Recortes para cuba e cooktop',
+                    'Suporte estrutural reforçado',
+                    'Acabamento antiderrapante',
+                    'Resistência até 200°C'
+                ],
+                includes: [
+                    'Bancada 3m lineares',
+                    'Recorte cuba inox',
+                    'Recorte cooktop 5 bocas',
+                    'Borda frontal 4cm',
+                    'Estrutura suporte MDF',
+                    'Impermeabilização completa',
+                    'Instalação profissional',
+                    'Manual de conservação'
+                ],
+                warranty: '10 anos pedra natural',
+                delivery: '35 a 50 dias úteis'
+            },
+            'mesa-trabalho': {
+                title: 'Mesa de Trabalho',
+                image: 'https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 3.600',
+                description: 'Superfície ampla e ergonômica para atividades profissionais, com organização inteligente para cabos e acessórios de trabalho.',
+                materials: [
+                    'Tampo MDF 25mm alta densidade',
+                    'Laminado melamínico texturizado',
+                    'Bordas PVC 2mm anti-impacto',
+                    'Estrutura metálica ajustável',
+                    'Passagem cabos integrada',
+                    'Régua elétrica embutida',
+                    'Pés niveladores telescópicos'
+                ],
+                includes: [
+                    'Mesa 1,60m x 0,80m',
+                    'Altura regulável 70-85cm',
+                    'Estrutura metálica robusta',
+                    'Passagem cabos (3 pontos)',
+                    'Régua elétrica 6 tomadas',
+                    'Gaveteiro móvel opcional',
+                    'Suporte CPU ajustável',
+                    'Manual de ajustes'
+                ],
+                warranty: '3 anos estrutura',
+                delivery: '30 a 40 dias úteis'
+            },
+            'bancada-banheiro': {
+                title: 'Bancada de Banheiro',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 3.200',
+                description: 'Elegância e funcionalidade em mármore ou porcelanato, resistente à umidade com design sofisticado para banheiros premium.',
+                materials: [
+                    'Mármore Carrara italiano 2cm',
+                    'Tratamento hidrorrepelente',
+                    'Borda chanfrada 45°',
+                    'Recorte cuba sobrepor',
+                    'Estrutura MDF naval',
+                    'Vedação silicone premium',
+                    'Acabamento fosco natural'
+                ],
+                includes: [
+                    'Bancada 1,20m x 0,55m',
+                    'Recorte cuba personalizado',
+                    'Borda chanfrada polida',
+                    'Estrutura suporte naval',
+                    'Tratamento anti-manchas',
+                    'Vedação completa',
+                    'Instalação especializada',
+                    'Kit manutenção'
+                ],
+                warranty: '5 anos mármore',
+                delivery: '40 a 55 dias úteis'
+            },
+            'mesa-lateral': {
+                title: 'Mesa Lateral',
+                image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 1.800',
+                description: 'Peça de apoio versátil combinando metal e madeira, perfeita para complementar sofás e poltronas com estilo industrial moderno.',
+                materials: [
+                    'Tampo madeira pinus 3cm',
+                    'Estrutura tubo aço carbono',
+                    'Acabamento tinta epóxi',
+                    'Verniz fosco resistente',
+                    'Soldas invisíveis polidas',
+                    'Proteção antioxidante',
+                    'Base antiderrapante'
+                ],
+                includes: [
+                    'Mesa 0,60m x 0,45m',
+                    'Altura 0,55m',
+                    'Tampo madeira tratada',
+                    'Base metálica robusta',
+                    'Proteção para piso',
+                    'Kit retoque tinta',
+                    'Manual de cuidados'
+                ],
+                warranty: '2 anos estrutura',
+                delivery: '20 a 30 dias úteis'
+            }
+        };
+
+        function openGallery(productId) {
+            const product = mesasData[productId];
+            
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product || productId === '') {
+                const fallbackData = {
+                    title: 'Mesa/Bancada Personalizada',
+                    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Mesa ou bancada planejada sob medida com acabamentos de qualidade e design funcional.',
+                    materials: ['MDF de alta densidade', 'Acabamento em laminado premium', 'Estrutura reforçada', 'Pés ajustáveis'],
+                    includes: ['Projeto 3D personalizado', 'Instalação completa incluída', 'Garantia de 2 anos', 'Suporte técnico'],
+                    warranty: '2 anos de garantia completa',
+                    delivery: '30 dias úteis para entrega'
+                };
+                
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4" style="color: #000000 !important;">${fallbackData.description}</p>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Reutilizar instância do modal para melhor performance
+                const modalElement = document.getElementById('galleryModal');
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (!modalInstance) {
+                    modalInstance = new bootstrap.Modal(modalElement);
+                }
+                modalInstance.show();
+                return;
+            }
+
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4" style="color: #000000 !important;">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Reutilizar instância do modal para melhor performance
+            const modalElement = document.getElementById('galleryModal');
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (!modalInstance) {
+                modalInstance = new bootstrap.Modal(modalElement);
+            }
+            modalInstance.show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

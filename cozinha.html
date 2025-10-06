@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozinha Planejada - Marcenaria Artesanal</title>
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item active" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-kitchen-set me-3 text-warning"></i>
+                        Cozinha Planejada
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Transforme sua cozinha no coração da sua casa com projetos sob medida que combinam funcionalidade inteligente, materiais de qualidade e design contemporâneo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Galeria de Cozinhas -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Projetos de Cozinha Planejada</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, especificações técnicas e acabamentos</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Cozinha Moderna Integrada -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('cozinha-moderna')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozinha Moderna" class="gallery-img">
+                            <div class="material-badge">Quartzo + MDF</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cozinha Moderna Integrada</h5>
+                            <p class="card-text">Design contemporâneo com ilha central, bancada em quartzo e acabamento em laca branca premium.</p>
+                            <div class="price-tag">A partir de R$ 15.500</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cozinha Clássica -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('cozinha-classica')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozinha Clássica" class="gallery-img">
+                            <div class="material-badge">Madeira + Granito</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cozinha Clássica</h5>
+                            <p class="card-text">Elegância atemporal com móveis em madeira nobre, bancada em granito e detalhes refinados.</p>
+                            <div class="price-tag">A partir de R$ 18.200</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cozinha Compacta -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('cozinha-compacta')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozinha Compacta" class="gallery-img">
+                            <div class="material-badge">MDP + Acrílico</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cozinha Compacta</h5>
+                            <p class="card-text">Máximo aproveitamento de espaços pequenos com soluções inteligentes e design funcional.</p>
+                            <div class="price-tag">A partir de R$ 8.900</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cozinha Industrial -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('cozinha-industrial')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozinha Industrial" class="gallery-img">
+                            <div class="material-badge">Inox + Concreto</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cozinha Industrial</h5>
+                            <p class="card-text">Estilo urbano com acabamentos em aço inox, concreto aparente e funcionalidade profissional.</p>
+                            <div class="price-tag">A partir de R$ 12.800</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cozinha Americana -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('cozinha-americana')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozinha Americana" class="gallery-img">
+                            <div class="material-badge">MDF + Silestone</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cozinha Americana</h5>
+                            <p class="card-text">Conceito aberto com balcão integrado à sala, perfeita para integração familiar e social.</p>
+                            <div class="price-tag">A partir de R$ 11.500</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cozinha Gourmet -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('cozinha-gourmet')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cozinha Gourmet" class="gallery-img">
+                            <div class="material-badge">Mármore + Madeira</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cozinha Gourmet</h5>
+                            <p class="card-text">Luxo e sofisticação para chefs exigentes, com equipamentos profissionais e materiais premium.</p>
+                            <div class="price-tag">A partir de R$ 22.500</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Atendimento:</strong><br>Segunda a Sexta, 8h às 18h<br>Sábados, 8h às 12h</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><i class="fab fa-whatsapp me-2" style="color: #25d366;"></i><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><i class="fas fa-envelope me-2" style="color: #e74c3c;"></i><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Redes Sociais</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-instagram me-3" style="color: #E4405F; font-size: 1.2rem;"></i>
+                            <span>@marcenaria_artesanal</span>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-facebook me-3" style="color: #1877F2; font-size: 1.2rem;"></i>
+                            <span>Marcenaria Artesanal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart" style="color: #e74c3c;"></i> para você</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    <script>
+        const cozinhaData = {
+            'cozinha-moderna': {
+                title: 'Cozinha Moderna Integrada',
+                image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 15.500',
+                description: 'Cozinha contemporânea com conceito aberto, ilha central multifuncional e acabamentos premium. Ideal para famílias modernas que valorizam integração e funcionalidade.',
+                materials: [
+                    'Bancada em quartzo Calacatta Extra 3cm',
+                    'Armários em MDF 18mm alta densidade',
+                    'Acabamento em laca branca alto brilho',
+                    'Ilha central com cooktop embutido',
+                    'Dobradiças Blum com fechamento suave',
+                    'Trilhos telescópicos premium',
+                    'Puxadores em alumínio escovado',
+                    'Iluminação LED under cabinet',
+                    'Eletrodutos embutidos'
+                ],
+                includes: [
+                    'Armários aéreos e balcões (12 peças)',
+                    'Ilha central 2,5 x 1,2m',
+                    'Bancada em quartzo sob medida',
+                    'Cooktop 5 bocas por indução',
+                    'Forno elétrico embutido',
+                    'Coifa de parede 90cm inox',
+                    'Pia dupla com torneira gourmet',
+                    'Sistema de iluminação LED',
+                    'Instalação elétrica e hidráulica',
+                    'Projeto 3D detalhado'
+                ],
+                warranty: '3 anos de garantia total',
+                delivery: '50 a 65 dias úteis'
+            },
+            'cozinha-classica': {
+                title: 'Cozinha Clássica',
+                image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 18.200',
+                description: 'Elegância atemporal com móveis em madeira nobre e detalhes refinados. Perfeita para quem aprecia tradição e sofisticação.',
+                materials: [
+                    'Madeira cerejeira maciça tratada',
+                    'Bancada em granito Branco Fortaleza',
+                    'Acabamento em verniz poliuretano',
+                    'Molduras decorativas torneadas',
+                    'Puxadores em bronze antigo',
+                    'Dobradiças convencionais reforçadas',
+                    'Prateleiras reguláveis em madeira',
+                    'Rodapé e sanca em madeira maciça'
+                ],
+                includes: [
+                    'Armários sob medida (14 peças)',
+                    'Bancada em granito polido',
+                    'Buffet com adega integrada',
+                    'Fogão 6 bocas profissional',
+                    'Coifa decorativa em cobre',
+                    'Cuba de louça dupla',
+                    'Torneira clássica em bronze',
+                    'Luminária pendente'
+                ],
+                warranty: '5 anos garantia madeira',
+                delivery: '60 a 75 dias úteis'
+            },
+            'cozinha-compacta': {
+                title: 'Cozinha Compacta',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 8.900',
+                description: 'Solução inteligente para espaços reduzidos, aproveitando cada centímetro disponível com funcionalidade máxima.',
+                materials: [
+                    'MDP 15mm resistente à umidade',
+                    'Acabamento em acrílico brilhante',
+                    'Bancada em granito sintético',
+                    'Puxadores cava integrados',
+                    'Corrediças metálicas simples',
+                    'Prateleiras aramadas',
+                    'Fita de borda ABS 1mm'
+                ],
+                includes: [
+                    'Armários otimizados (8 peças)',
+                    'Bancada compacta L',
+                    'Cooktop 4 bocas vidro',
+                    'Microondas de embutir',
+                    'Coifa slim 60cm',
+                    'Pia pequena com escorredor',
+                    'Torneira monocomando'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '30 a 40 dias úteis'
+            },
+            'cozinha-industrial': {
+                title: 'Cozinha Industrial',
+                image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 12.800',
+                description: 'Estilo urbano com materiais industriais e funcionalidade profissional. Para quem busca durabilidade e design arrojado.',
+                materials: [
+                    'Estrutura em aço carbono',
+                    'Bancada em concreto usinado',
+                    'Portas em aço inox escovado',
+                    'Prateleiras aramadas cromadas',
+                    'Trilhos industriais externos',
+                    'Puxadores em tubo de aço',
+                    'Acabamento anti-corrosivo'
+                ],
+                includes: [
+                    'Módulos industriais (10 peças)',
+                    'Bancada em concreto 4cm',
+                    'Fogão industrial 6 bocas',
+                    'Coifa industrial inox',
+                    'Cuba inox profissional',
+                    'Torneira industrial',
+                    'Prateleiras suspensas',
+                    'Barras para utensílios'
+                ],
+                warranty: '3 anos estrutura',
+                delivery: '45 a 55 dias úteis'
+            },
+            'cozinha-americana': {
+                title: 'Cozinha Americana',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 11.500',
+                description: 'Conceito aberto que integra cozinha e sala, criando ambiente social e familiar. Perfeita para receber e conviver.',
+                materials: [
+                    'MDF 18mm ecológico',
+                    'Bancada em Silestone composto',
+                    'Laminado melamínico texturizado',
+                    'Balcão tipo americana 42cm altura',
+                    'Puxadores modernos em aço',
+                    'Dobradiças com amortecedor',
+                    'Painéis decorativos integrados'
+                ],
+                includes: [
+                    'Armários integrados (11 peças)',
+                    'Balcão americana 3m',
+                    'Bancada em Silestone',
+                    'Cooktop elétrico 4 bocas',
+                    'Forno de embutir',
+                    'Coifa de ilha suspensa',
+                    'Pia com área de apoio',
+                    'Banquetas (3 unidades)'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '40 a 50 dias úteis'
+            },
+            'cozinha-gourmet': {
+                title: 'Cozinha Gourmet',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 22.500',
+                description: 'O máximo em luxo e funcionalidade para chefs exigentes. Equipamentos profissionais e materiais premium definem este projeto.',
+                materials: [
+                    'Madeira carvalho americano',
+                    'Bancada em mármore Carrara italiano',
+                    'Ilha em madeira + mármore',
+                    'Ferragens Hafele premium',
+                    'Puxadores em couro italiano',
+                    'Iluminação Philips Hue',
+                    'Revestimentos importados',
+                    'Verniz marítimo tripla proteção'
+                ],
+                includes: [
+                    'Móveis premium sob medida',
+                    'Ilha gourmet 3 x 1,5m',
+                    'Fogão profissional 8 bocas',
+                    'Forno combinado steam',
+                    'Coifa designer em cobre',
+                    'Adega climatizada 50 garrafas',
+                    'Cuba extra profunda',
+                    'Torneira pull-out profissional',
+                    'Sistema de som integrado'
+                ],
+                warranty: '5 anos garantia total',
+                delivery: '75 a 90 dias úteis'
+            }
+        };
+        function openGallery(productId) {
+            const product = cozinhaData[productId];
+            if (!product) return;
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4">${product.description}</p>
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li>${material}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            // O modal será aberto automaticamente pelos atributos data-bs-toggle
+        }
+        // Otimização: Limpar conteúdo quando modal fecha para melhorar performance
+        document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+            document.getElementById('modalContent').innerHTML = '';
+            document.getElementById('modalImage').src = '';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

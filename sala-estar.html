@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Estar - Marcenaria Artesanal</title>
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="../css-universal-modal.css" rel="stylesheet">
+    <style>
+        /* Fix para dropdown navigation - SIMPLES E FUNCIONAL */
+        .navbar-nav .dropdown-menu {
+            z-index: 1050 !important;
+            position: absolute !important;
+            background-color: #ffffff !important;
+            border: 1px solid #dee2e6 !important;
+            border-radius: 0.375rem !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+        }
+        .dropdown-item {
+            display: block !important;
+            width: 100% !important;
+            padding: 0.375rem 1rem !important;
+            clear: both !important;
+            font-weight: 400 !important;
+            color: #212529 !important;
+            text-align: inherit !important;
+            text-decoration: none !important;
+            white-space: nowrap !important;
+            background-color: transparent !important;
+            border: 0 !important;
+        }
+        .dropdown-item:hover, .dropdown-item:focus {
+            background-color: #1a1a2e !important;
+            color: white !important;
+        }
+        .dropdown-item.active {
+            background-color: #0d6efd !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item active" href="sala-estar.html">Sala de Estar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-couch me-3 text-warning"></i>
+                        Sala de Estar Planejada
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Crie um ambiente acolhedor e funcional com móveis sob medida que combinam conforto, estilo e organização inteligente para momentos especiais em família.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Galeria de Salas -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Projetos de Sala de Estar</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, dimensões e especificações técnicas</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Sala Moderna Integrada -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sala Moderna" class="gallery-img">
+                            <div class="material-badge">MDF Premium</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sala Moderna Integrada</h5>
+                            <p class="card-text">Design contemporâneo com rack suspenso, painel para TV e móveis multifuncionais em acabamento premium de alta qualidade.</p>
+                            <div class="price-tag">A partir de R$ 9.800</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sala Clássica -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sala Clássica" class="gallery-img">
+                            <div class="material-badge">Madeira Nobre</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sala Clássica Elegante</h5>
+                            <p class="card-text">Elegância atemporal com móveis em madeira nobre, detalhes entalhados e acabamentos refinados para ambientes sofisticados.</p>
+                            <div class="price-tag">A partir de R$ 14.500</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Home Theater -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Theater" class="gallery-img">
+                            <div class="material-badge">MDF + LED</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Theater Completo</h5>
+                            <p class="card-text">Ambiente dedicado ao entretenimento com painel acústico, iluminação LED e organização para equipamentos de última geração.</p>
+                            <div class="price-tag">A partir de R$ 12.200</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sala Compacta -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sala Compacta" class="gallery-img">
+                            <div class="material-badge">MDP + Espelho</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sala Compacta Inteligente</h5>
+                            <p class="card-text">Soluções inteligentes para espaços pequenos com móveis suspensos e espelhos que ampliam o ambiente visualmente.</p>
+                            <div class="price-tag">A partir de R$ 6.900</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sala Industrial -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sala Industrial" class="gallery-img">
+                            <div class="material-badge">Aço + Madeira</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sala Industrial Moderna</h5>
+                            <p class="card-text">Estilo urbano com estrutura metálica, madeira de demolição e elementos industriais autênticos para ambientes únicos.</p>
+                            <div class="price-tag">A partir de R$ 8.600</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sala de TV -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sala de TV" class="gallery-img">
+                            <div class="material-badge">Laminado + Vidro</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Sala de TV Familiar</h5>
+                            <p class="card-text">Foco no entretenimento familiar com rack amplo, organização para games e conforto para maratonas.</p>
+                            <div class="price-tag">A partir de R$ 7.400</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Atendimento:</strong><br>Segunda a Sexta, 8h às 18h<br>Sábados, 8h às 12h</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><i class="fab fa-whatsapp me-2" style="color: #25d366;"></i><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><i class="fas fa-envelope me-2" style="color: #e74c3c;"></i><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Redes Sociais</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-instagram me-3" style="color: #E4405F; font-size: 1.2rem;"></i>
+                            <span>@marcenaria_artesanal</span>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-facebook me-3" style="color: #1877F2; font-size: 1.2rem;"></i>
+                            <span>Marcenaria Artesanal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart" style="color: #e74c3c;"></i> para você</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    <script>
+        // Fix SIMPLES para dropdown navigation - apenas clique
+        document.addEventListener('DOMContentLoaded', function() {
+            // Garantir que todos os links dropdown funcionem
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault(); // Prevenir comportamento padrão
+                    const href = this.getAttribute('href');
+                    console.log('Clicou em:', href); // Debug
+                    if (href && href !== '#') {
+                        // Usar setTimeout para garantir que a navegação aconteça
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 100);
+                    }
+                });
+            });
+            
+            // Debug: listar todos os links encontrados
+            console.log('Links dropdown encontrados:');
+            dropdownItems.forEach(item => {
+                console.log('- ' + item.textContent + ' -> ' + item.getAttribute('href'));
+            });
+        });
+    </script>
+    <script>
+        const salaData = {
+            'sala-moderna': {
+                title: 'Sala Moderna Integrada',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 9.800',
+                description: 'Ambiente contemporâneo com linhas limpas e funcionalidade inteligente. Perfeita para famílias modernas que valorizam design e praticidade.',
+                materials: [
+                    'MDF 18mm alta densidade',
+                    'Acabamento em laca fosca premium',
+                    'Painel TV com nichos LED',
+                    'Rack suspenso com puxadores cava',
+                    'Prateleiras de vidro temperado 8mm',
+                    'Iluminação LED embutida regulável',
+                    'Espelhos bisotados decorativos',
+                    'Pés metálicos ajustáveis'
+                ],
+                includes: [
+                    'Painel TV até 75" (3m largura)',
+                    'Rack suspenso 2,5m',
+                    'Estante lateral com nichos',
+                    'Mesa de centro moderna',
+                    'Aparador com gavetas',
+                    'Sistema iluminação LED',
+                    'Passagem de cabos organizada',
+                    'Montagem e instalação'
+                ],
+                warranty: '3 anos de garantia',
+                delivery: '40 a 50 dias úteis'
+            },
+            'sala-classica': {
+                title: 'Sala Clássica',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 14.500',
+                description: 'Elegância atemporal com móveis em madeira nobre e detalhes artesanais. Para quem aprecia tradição e sofisticação.',
+                materials: [
+                    'Madeira mogno maciço',
+                    'Entalhes decorativos à mão',
+                    'Verniz fosco natural premium',
+                    'Puxadores em bronze antigo',
+                    'Dobradiças convencionais robustas',
+                    'Prateleiras ajustáveis em madeira',
+                    'Molduras decorativas torneadas',
+                    'Acabamento encerado tradicional'
+                ],
+                includes: [
+                    'Estante biblioteca 3m altura',
+                    'Rack clássico com portas',
+                    'Mesa de centro entalhada',
+                    'Aparador com cristaleira',
+                    'Luminária pendente clássica',
+                    'Molduras decorativas',
+                    'Espelhos com moldura dourada'
+                ],
+                warranty: '5 anos madeira nobre',
+                delivery: '60 a 75 dias úteis'
+            },
+            'home-theater': {
+                title: 'Home Theater',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 12.200',
+                description: 'Ambiente dedicado ao entretenimento com tratamento acústico e tecnologia integrada para experiência cinematográfica.',
+                materials: [
+                    'MDF acústico 25mm',
+                    'Revestimento em tecido acústico',
+                    'Painéis com isolamento sonoro',
+                    'Estrutura para projetor',
+                    'Cabeamento HDMI embutido',
+                    'Iluminação RGB programável',
+                    'Espuma acústica profissional',
+                    'Acabamento anti-reflexo'
+                ],
+                includes: [
+                    'Painel acústico completo',
+                    'Suporte para projetor',
+                    'Rack para equipamentos A/V',
+                    'Sistema de iluminação RGB',
+                    'Cabeamento organizado',
+                    'Poltronas reclináveis (4x)',
+                    'Mesa para pipoca/bebidas',
+                    'Instalação de som ambiente'
+                ],
+                warranty: '2 anos equipamentos',
+                delivery: '45 a 60 dias úteis'
+            },
+            'sala-compacta': {
+                title: 'Sala Compacta',
+                image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 6.900',
+                description: 'Soluções inteligentes para apartamentos pequenos, maximizando funcionalidade sem comprometer o estilo.',
+                materials: [
+                    'MDP 15mm resistente',
+                    'Laminado melamínico brilhante',
+                    'Espelhos para ampliar ambiente',
+                    'Móveis suspensos para leveza',
+                    'Puxadores minimalistas',
+                    'Prateleiras de canto otimizadas',
+                    'Sistema modular expansível'
+                ],
+                includes: [
+                    'Painel TV compacto 2m',
+                    'Rack suspenso 1,8m',
+                    'Estante modular de canto',
+                    'Mesa de centro retrátil',
+                    'Espelhos decorativos (3x)',
+                    'Nicho para decoração',
+                    'Manual de expansão'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '25 a 35 dias úteis'
+            },
+            'sala-industrial': {
+                title: 'Sala Industrial',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 8.600',
+                description: 'Estilo urbano autêntico com materiais industriais e design robusto. Para quem busca personalidade e originalidade.',
+                materials: [
+                    'Estrutura em aço carbono',
+                    'Madeira de demolição tratada',
+                    'Tubos industriais aparentes',
+                    'Acabamento em tinta epóxi',
+                    'Prateleiras de ferro e madeira',
+                    'Parafusos aparentes decorativos',
+                    'Proteção anti-ferrugem'
+                ],
+                includes: [
+                    'Estante industrial 2,5m',
+                    'Rack em ferro e madeira',
+                    'Mesa de centro industrial',
+                    'Luminária pendente metálica',
+                    'Prateleiras suspensas (4x)',
+                    'Ganchos para decoração',
+                    'Manual de manutenção'
+                ],
+                warranty: '18 meses estrutura',
+                delivery: '35 a 45 dias úteis'
+            },
+            'sala-tv': {
+                title: 'Sala de TV',
+                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 7.400',
+                description: 'Focada no entretenimento familiar com organização para games, filmes e momentos de lazer em casa.',
+                materials: [
+                    'Laminado melamínico texturizado',
+                    'Vidros temperados fumê',
+                    'Estrutura em MDP 18mm',
+                    'Gavetas com trilhos telescópicos',
+                    'Portas de vidro com amortecedor',
+                    'Furação para ventilação',
+                    'Passagem cabos organizada'
+                ],
+                includes: [
+                    'Rack para TV até 65"',
+                    'Gavetas para games/controles',
+                    'Prateleiras para DVD/Blu-ray',
+                    'Nicho para videogame',
+                    'Mesa de apoio lateral',
+                    'Organizador de cabos',
+                    'Suporte para controles'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '30 a 40 dias úteis'
+            }
+        };
+        function openGallery(productId) {
+            const product = salaData[productId];
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product || productId === '') {
+                const fallbackData = {
+                    title: 'Móvel para Sala Personalizado',
+                    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Móvel para sala planejado sob medida com acabamentos de qualidade e design exclusivo.',
+                    materials: ['MDF de alta densidade', 'Acabamento em laminado premium', 'Ferragens de qualidade alemã', 'Puxadores em aço inox'],
+                    includes: ['Projeto 3D personalizado', 'Instalação completa incluída', 'Garantia de 2 anos', 'Manutenção pós-venda'],
+                    warranty: '2 anos de garantia completa',
+                    delivery: '30 dias úteis para entrega'
+                };
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4">${fallbackData.description}</p>
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li>${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                // Reutilizar instância do modal para melhor performance
+                const modalElement = document.getElementById('galleryModal');
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (!modalInstance) {
+                    modalInstance = new bootstrap.Modal(modalElement);
+                }
+                modalInstance.show();
+                return;
+            }
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4">${product.description}</p>
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li>${material}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            // Reutilizar instância do modal para melhor performance
+            const modalElement = document.getElementById('galleryModal');
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (!modalInstance) {
+                modalInstance = new bootstrap.Modal(modalElement);
+            }
+            modalInstance.show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

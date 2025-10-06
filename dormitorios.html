@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dormitórios - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-bed me-3 text-warning"></i>
+                        Dormitórios Sob Medida
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Transforme seu quarto em um ambiente acolhedor e funcional com móveis planejados que combinam conforto, elegância e aproveitamento inteligente do espaço disponível.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Dormitórios -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Nossa Coleção de Dormitórios</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique em qualquer imagem para ver detalhes completos dos materiais, dimensões e acabamentos utilizados</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Quarto Casal Luxo -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('quarto-casal-luxo')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quarto Casal Luxo" class="gallery-img">
+                            <div class="material-badge">MDF + Laminado</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Quarto Casal Luxo</h5>
+                            <p class="card-text">Conjunto completo com guarda-roupa espaçoso, cama estofada, criados-mudos funcionais e penteadeira elegante em design sofisticado e atemporal.</p>
+                            <div class="price-tag">A partir de R$ 8.500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quarto Casal Moderno -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('quarto-casal-moderno')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quarto Casal Moderno" class="gallery-img">
+                            <div class="material-badge">MDP + Laca</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Quarto Casal Moderno</h5>
+                            <p class="card-text">Design contemporâneo com linhas limpas e funcionalidade otimizada. Perfeito para quem busca praticidade sem abrir mão do estilo.</p>
+                            <div class="price-tag">A partir de R$ 6.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quarto Solteiro -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('quarto-solteiro')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quarto Solteiro" class="gallery-img">
+                            <div class="material-badge">MDF + Verniz</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Quarto Solteiro</h5>
+                            <p class="card-text">Solução inteligente para quartos individuais com aproveitamento máximo do espaço.</p>
+                            <div class="price-tag">A partir de R$ 3.800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quarto Infantil -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('quarto-infantil')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quarto Infantil" class="gallery-img">
+                            <div class="material-badge">MDF + Tinta</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Quarto Infantil</h5>
+                            <p class="card-text">Ambiente lúdico e seguro com móveis duráveis e design alegre para as crianças.</p>
+                            <div class="price-tag">A partir de R$ 4.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closet Planejado -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('closet-planejado')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Closet Planejado" class="gallery-img">
+                            <div class="material-badge">MDF + Espelho</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Closet Planejado</h5>
+                            <p class="card-text">Organização total para suas roupas com divisórias inteligentes e espelhos integrados.</p>
+                            <div class="price-tag">A partir de R$ 5.500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quarto de Hóspedes -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('quarto-hospedes')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quarto de Hóspedes" class="gallery-img">
+                            <div class="material-badge">MDF + Laminado</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Quarto de Hóspedes</h5>
+                            <p class="card-text">Ambiente acolhedor e funcional para receber visitas com conforto e elegância.</p>
+                            <div class="price-tag">A partir de R$ 4.800</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent">
+                                <!-- Conteúdo será preenchido via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Atendimento:</strong><br>Segunda a Sexta, 8h às 18h<br>Sábados, 8h às 12h</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><i class="fab fa-whatsapp me-2" style="color: #25d366;"></i><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><i class="fas fa-envelope me-2" style="color: #e74c3c;"></i><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Redes Sociais</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-instagram me-3" style="color: #E4405F; font-size: 1.2rem;"></i>
+                            <span>@marcenaria_artesanal</span>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-facebook me-3" style="color: #1877F2; font-size: 1.2rem;"></i>
+                            <span>Marcenaria Artesanal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart" style="color: #e74c3c;"></i> para você</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        // Banco de dados com detalhes completos
+        const dormitoriosData = {
+            'quarto-casal-luxo': {
+                title: 'Quarto Casal Luxo',
+                image: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 8.500',
+                description: 'Conjunto completo de móveis para quarto de casal, desenvolvido com materiais premium e acabamentos sofisticados. Ideal para casais que buscam elegância e funcionalidade.',
+                materials: [
+                    'Estrutura em MDF 18mm de alta densidade',
+                    'Revestimento em laminado melamínico resistente',
+                    'Puxadores em alumínio escovado',
+                    'Dobradiças com amortecedor Blum',
+                    'Trilhos telescópicos com fechamento suave',
+                    'Espelhos bisotados de 4mm',
+                    'Iluminação LED embutida',
+                    'Acabamento em laca UV fosca'
+                ],
+                includes: [
+                    'Guarda-roupa 6 portas (2,70m)',
+                    'Cama box com cabeceira estofada',
+                    '2 Criados-mudos com 3 gavetas',
+                    'Penteadeira com espelho e banco',
+                    'Painel TV com nicho',
+                    'Instalação completa incluída'
+                ],
+                warranty: '2 anos de garantia total',
+                delivery: '30 a 45 dias úteis'
+            },
+            'quarto-casal-moderno': {
+                title: 'Quarto Casal Moderno',
+                image: 'https://images.unsplash.com/photo-1596178065887-1198b6148b2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 6.200',
+                description: 'Design contemporâneo com linhas limpas e funcionalidade otimizada. Perfeito para ambientes modernos que valorizam simplicidade e elegância.',
+                materials: [
+                    'Estrutura em MDP 15mm',
+                    'Acabamento em laca branca brilhante',
+                    'Puxadores em aço inox',
+                    'Dobradiças convencionais',
+                    'Corrediças metálicas',
+                    'Prateleiras reguláveis',
+                    'Fita de borda ABS 2mm'
+                ],
+                includes: [
+                    'Guarda-roupa 4 portas (2,20m)',
+                    'Cama com cabeceira simples',
+                    '2 Criados-mudos suspensos',
+                    'Cômoda com 4 gavetas',
+                    'Espelho decorativo',
+                    'Montagem incluída'
+                ],
+                warranty: '1 ano de garantia',
+                delivery: '25 a 35 dias úteis'
+            },
+            'quarto-solteiro': {
+                title: 'Quarto Solteiro',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 3.800',
+                description: 'Solução inteligente para quartos individuais com aproveitamento máximo do espaço disponível. Ideal para jovens e solteiros.',
+                materials: [
+                    'Estrutura em MDF 15mm',
+                    'Verniz poliuretano natural',
+                    'Puxadores em madeira torneada',
+                    'Dobradiças convencionais',
+                    'Gavetas com corrediças simples',
+                    'Prateleiras fixas em MDF',
+                    'Acabamento natural preservante'
+                ],
+                includes: [
+                    'Guarda-roupa 3 portas (1,80m)',
+                    'Cama solteiro com gavetas',
+                    'Mesa de estudo com gavetas',
+                    'Estante para livros',
+                    'Criado-mudo compacto',
+                    'Instalação gratuita'
+                ],
+                warranty: '1 ano de garantia',
+                delivery: '20 a 30 dias úteis'
+            },
+            'quarto-infantil': {
+                title: 'Quarto Infantil',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 4.200',
+                description: 'Ambiente lúdico e seguro desenvolvido especialmente para crianças, com móveis duráveis e design alegre que estimula a criatividade.',
+                materials: [
+                    'MDF 18mm alta resistência',
+                    'Tinta PU atóxica e lavável',
+                    'Cantos arredondados (segurança)',
+                    'Puxadores emborrachados',
+                    'Dobradiças com trava de segurança',
+                    'Gavetas com limitador',
+                    'Verniz ecológico à base d\'água'
+                ],
+                includes: [
+                    'Cama com proteção lateral',
+                    'Guarda-roupa colorido 4 portas',
+                    'Mesa de estudo regulável',
+                    'Estante para brinquedos',
+                    'Baú organizador',
+                    'Nicho decorativo',
+                    'Adesivos temáticos inclusos'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '25 a 35 dias úteis'
+            },
+            'closet-planejado': {
+                title: 'Closet Planejado',
+                image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 5.500',
+                description: 'Sistema de organização completo para suas roupas e acessórios, com divisórias inteligentes e aproveitamento total do espaço.',
+                materials: [
+                    'MDF 18mm estrutural',
+                    'Laminado melamínico texturizado',
+                    'Espelhos bisotados 6mm',
+                    'Divisórias removíveis',
+                    'Cabideiros cromados',
+                    'Gavetas com fundo de vidro',
+                    'Iluminação LED sensor',
+                    'Puxadores push-pull'
+                ],
+                includes: [
+                    'Estrutura completa sob medida',
+                    'Espelhos de corpo inteiro',
+                    'Cabideiros ajustáveis',
+                    'Sapateira com 20 divisões',
+                    'Gavetas para acessórios',
+                    'Prateleiras reguláveis',
+                    'Sistema de iluminação',
+                    'Projeto 3D incluído'
+                ],
+                warranty: '3 anos de garantia',
+                delivery: '35 a 50 dias úteis'
+            },
+            'quarto-hospedes': {
+                title: 'Quarto de Hóspedes',
+                image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 4.800',
+                description: 'Ambiente acolhedor e funcional para receber visitas com conforto e elegância, aproveitando ao máximo espaços menores.',
+                materials: [
+                    'MDF 15mm ecológico',
+                    'Laminado melamínico neutro',
+                    'Puxadores discretos em aço',
+                    'Dobradiças silenciosas',
+                    'Corrediças com amortecedor',
+                    'Prateleiras ajustáveis',
+                    'Acabamento resistente a riscos'
+                ],
+                includes: [
+                    'Cama box solteiro ou casal',
+                    'Guarda-roupa 3 portas compacto',
+                    'Criado-mudo com gaveta',
+                    'Poltrona ou cadeira',
+                    'Espelho de parede',
+                    'Luminária de leitura',
+                    'Entrega e montagem'
+                ],
+                warranty: '18 meses de garantia',
+                delivery: '20 a 30 dias úteis'
+            }
+        };
+
+        // Função para abrir galeria
+        function openGallery(productId) {
+            const product = dormitoriosData[productId];
+            
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product) {
+                // Dados de fallback para cards sem ID específico
+                const fallbackData = {
+                    title: 'Móvel Personalizado',
+                    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Móvel planejado sob medida com acabamentos de qualidade e design exclusivo.',
+                    materials: ['MDF de alta densidade', 'Acabamento em laminado', 'Ferragens de qualidade'],
+                    includes: ['Projeto 3D', 'Instalação incluída', 'Garantia de 1 ano'],
+                    warranty: '1 ano de garantia',
+                    delivery: '30 dias úteis'
+                };
+                
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4" style="color: #000000 !important;">${fallbackData.description}</p>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Acabamentos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Atualizar modal com dados específicos
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            // Criar conteúdo detalhado
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4" style="color: #000000 !important;">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Acabamentos</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // O modal será aberto automaticamente pelos atributos data-bs-toggle
+        }
+
+        // Otimização: Limpar conteúdo quando modal fecha para melhorar performance
+        document.getElementById('galleryModal').addEventListener('hidden.bs.modal', function () {
+            document.getElementById('modalContent').innerHTML = '';
+            document.getElementById('modalImage').src = '';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

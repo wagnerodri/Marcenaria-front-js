@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Office - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="../css-universal-modal.css" rel="stylesheet">
+    <style>
+        /* Fix para dropdown navigation */
+        .navbar-nav .dropdown-menu {
+            z-index: 1050 !important;
+            position: absolute !important;
+        }
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+        .dropdown-toggle::after {
+            border-top: 0.3em solid !important;
+            border-right: 0.3em solid transparent !important;
+            border-bottom: 0 !important;
+            border-left: 0.3em solid transparent !important;
+        }
+        .dropdown-item:hover {
+            background-color: #1a1a2e !important;
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                            <li><a class="dropdown-item active" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-laptop-house me-3 text-warning"></i>
+                        Home Office Planejado
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Crie seu espaço de trabalho ideal com móveis ergonômicos, organização inteligente e design que inspira produtividade no conforto do seu lar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Home Office -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Projetos de Home Office</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, dimensões e especificações ergonômicas</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Home Office Executivo -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Executivo" class="gallery-img">
+                            <div class="material-badge">Madeira + Couro</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Office Executivo</h5>
+                            <p class="card-text">Ambiente sofisticado com móveis em madeira nobre, ergonomia premium e organização para reuniões profissionais.</p>
+                            <div class="price-tag">A partir de R$ 15.800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Office Moderno -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Moderno" class="gallery-img">
+                            <div class="material-badge">MDF + LED</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Office Moderno</h5>
+                            <p class="card-text">Design clean com tecnologia integrada, iluminação LED inteligente e soluções para múltiplos monitores.</p>
+                            <div class="price-tag">A partir de R$ 9.600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Office Compacto -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Compacto" class="gallery-img">
+                            <div class="material-badge">MDP + Escrivaninha</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Office Compacto</h5>
+                            <p class="card-text">Máxima funcionalidade em espaços pequenos com mesa dobrável, prateleiras suspensas e organização vertical.</p>
+                            <div class="price-tag">A partir de R$ 5.400</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Office Criativo -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Criativo" class="gallery-img">
+                            <div class="material-badge">Madeira + Ferro</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Office Criativo</h5>
+                            <p class="card-text">Ambiente inspirador para designers e artistas com mesas amplas, organização de materiais e iluminação natural.</p>
+                            <div class="price-tag">A partir de R$ 8.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Office Compartilhado -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Compartilhado" class="gallery-img">
+                            <div class="material-badge">Divisórias + MDF</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Office Compartilhado</h5>
+                            <p class="card-text">Solução para casais ou famílias com divisórias funcionais, estações duplas e privacidade acústica.</p>
+                            <div class="price-tag">A partir de R$ 12.500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Home Office Gamer -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Gamer" class="gallery-img">
+                            <div class="material-badge">RGB + Gaming</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Home Office Gamer</h5>
+                            <p class="card-text">Setup completo para games e streaming com iluminação RGB, suporte para múltiplos monitores e organização de cabos.</p>
+                            <div class="price-tag">A partir de R$ 11.200</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Atendimento:</strong><br>Segunda a Sexta, 8h às 18h<br>Sábados, 8h às 12h</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <p class="text-center mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        // Fix para dropdown navigation - garantir funcionamento
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar dropdowns do Bootstrap
+            const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
+            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl));
+            
+            // Adicionar evento hover para melhor UX
+            const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', function() {
+                    const dropdownToggle = this.querySelector('.dropdown-toggle');
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownToggle && dropdownMenu) {
+                        dropdownMenu.classList.add('show');
+                        dropdownToggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    const dropdownToggle = this.querySelector('.dropdown-toggle');
+                    const dropdownMenu = this.querySelector('.dropdown-menu');
+                    if (dropdownToggle && dropdownMenu) {
+                        dropdownMenu.classList.remove('show');
+                        dropdownToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+            
+            // Garantir que links funcionem
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#') {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+        
+        const officeData = {
+            'office-executivo': {
+                title: 'Home Office Executivo',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 15.800',
+                description: 'Ambiente sofisticado para profissionais executivos, combinando elegância, funcionalidade e tecnologia de ponta para reuniões e apresentações.',
+                materials: [
+                    'Mesa executiva em mogno maciço 1,80m',
+                    'Gaveteiro com fechadura de segurança',
+                    'Estante biblioteca em madeira nobre',
+                    'Poltronas em couro legítimo',
+                    'Luminária de mesa premium LED',
+                    'Carpete de madeira vinílica',
+                    'Sistema de som ambiente',
+                    'Câmera para videoconferência'
+                ],
+                includes: [
+                    'Mesa executiva 180x80cm',
+                    'Cadeira presidente ergonômica',
+                    'Estante para livros 2,5m altura',
+                    'Gaveteiro com 4 gavetas',
+                    'Poltrona para visitas (2x)',
+                    'Mesa lateral para café',
+                    'Sistema iluminação LED',
+                    'Suporte para CPU e impressora'
+                ],
+                warranty: '5 anos madeira nobre',
+                delivery: '60 a 75 dias úteis'
+            },
+            'office-moderno': {
+                title: 'Home Office Moderno',
+                image: 'https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 9.600',
+                description: 'Design minimalista com tecnologia integrada, perfeito para profissionais de TI e startups que valorizam inovação e produtividade.',
+                materials: [
+                    'MDF 18mm alta densidade',
+                    'Acabamento laca branca fosca',
+                    'Tampo em vidro temperado 10mm',
+                    'Estrutura metálica ajustável',
+                    'Sistema LED RGB programável',
+                    'Passagem de cabos embutida',
+                    'Suporte para 3 monitores',
+                    'Base com rodízios premium'
+                ],
+                includes: [
+                    'Mesa em L 160x120cm',
+                    'Cadeira ergonômica mesh',
+                    'Painel organizador vertical',
+                    'Suporte duplo para monitor',
+                    'Gaveteiro suspenso',
+                    'Luminária LED regulável',
+                    'Organizador de cabos',
+                    'Suporte para notebook'
+                ],
+                warranty: '3 anos de garantia',
+                delivery: '35 a 45 dias úteis'
+            },
+            'office-compacto': {
+                title: 'Home Office Compacto',
+                image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 5.400',
+                description: 'Solução inteligente para apartamentos pequenos, maximizando funcionalidade sem ocupar muito espaço no ambiente.',
+                materials: [
+                    'MDP 15mm resistente à umidade',
+                    'Laminado melamínico texturizado',
+                    'Mesa dobrável na parede',
+                    'Prateleiras suspensas ajustáveis',
+                    'Puxadores tipo cava',
+                    'Suporte monitor articulado',
+                    'Organizador vertical'
+                ],
+                includes: [
+                    'Mesa escamoteável 100x60cm',
+                    'Cadeira compacta ergonômica',
+                    'Prateleiras suspensas (4x)',
+                    'Painel organizador',
+                    'Suporte para CPU mini',
+                    'Luminária de mesa LED',
+                    'Kit organização gavetas'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '20 a 30 dias úteis'
+            },
+            'office-criativo': {
+                title: 'Home Office Criativo',
+                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 8.200',
+                description: 'Ambiente inspirador para designers, arquitetos e artistas com mesas amplas e organização para materiais criativos.',
+                materials: [
+                    'Mesa em madeira pinus tratada',
+                    'Estrutura tubular industrial',
+                    'Prancheta inclinável A1',
+                    'Organizador de materiais vertical',
+                    'Luminária articulada profissional',
+                    'Painel perfurado para ferramentas',
+                    'Gavetas para materiais'
+                ],
+                includes: [
+                    'Mesa de desenho 150x100cm',
+                    'Cadeira para designers',
+                    'Prancheta inclinável',
+                    'Organizador vertical A4',
+                    'Luminária arquiteto LED',
+                    'Painel organizador ferramentas',
+                    'Porta rolos de papel',
+                    'Gaveteiro para materiais'
+                ],
+                warranty: '3 anos estrutura',
+                delivery: '40 a 50 dias úteis'
+            },
+            'office-compartilhado': {
+                title: 'Home Office Compartilhado',
+                image: 'https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 12.500',
+                description: 'Solução para casais ou famílias que trabalham em casa, com estações independentes e privacidade acústica.',
+                materials: [
+                    'Divisória acústica 180cm altura',
+                    'MDF 18mm dupla estrutura',
+                    'Revestimento anti-ruído',
+                    'Mesas independentes L',
+                    'Sistema elétrico duplo',
+                    'Iluminação individual LED',
+                    'Gavetas com fechadura'
+                ],
+                includes: [
+                    'Estação trabalho dupla',
+                    'Divisória acústica móvel',
+                    'Cadeiras ergonômicas (2x)',
+                    'Mesa L individual (2x)',
+                    'Gaveteiros independentes',
+                    'Sistema iluminação duplo',
+                    'Organizador cabos separado',
+                    'Suportes CPU individuais'
+                ],
+                warranty: '3 anos de garantia',
+                delivery: '50 a 60 dias úteis'
+            },
+            'office-gamer': {
+                title: 'Home Office Gamer',
+                image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 11.200',
+                description: 'Setup completo para gamers e streamers com tecnologia integrada, iluminação RGB e organização para periféricos.',
+                materials: [
+                    'Mesa gamer curvada 160cm',
+                    'Estrutura reforçada para peso',
+                    'Sistema RGB sincronizado',
+                    'Suporte triplo monitor',
+                    'Organizador para headset',
+                    'Painel acústico gamer',
+                    'Suporte para controles',
+                    'Hub USB integrado'
+                ],
+                includes: [
+                    'Mesa gamer curvada RGB',
+                    'Cadeira gamer ergonômica',
+                    'Suporte triplo monitor',
+                    'Painel LED programável',
+                    'Organizador periféricos',
+                    'Suporte headset iluminado',
+                    'Hub USB com carregamento',
+                    'Sistema cabo management'
+                ],
+                warranty: '2 anos eletrônicos',
+                delivery: '45 a 55 dias úteis'
+            }
+        };
+
+        function openGallery(productId) {
+            const product = officeData[productId];
+            
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product || productId === '') {
+                const fallbackData = {
+                    title: 'Home Office Personalizado',
+                    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Home office planejado sob medida com acabamentos de qualidade e design funcional para produtividade.',
+                    materials: ['MDF de alta densidade', 'Acabamento em laminado premium', 'Ferragens telescópicas', 'Sistema de organização de cabos'],
+                    includes: ['Projeto 3D personalizado', 'Instalação completa incluída', 'Garantia de 2 anos', 'Suporte técnico'],
+                    warranty: '2 anos de garantia completa',
+                    delivery: '30 dias úteis para entrega'
+                };
+                
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4" style="color: #000000 !important;">${fallbackData.description}</p>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Reutilizar instância do modal para melhor performance
+                const modalElement = document.getElementById('galleryModal');
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (!modalInstance) {
+                    modalInstance = new bootstrap.Modal(modalElement);
+                }
+                modalInstance.show();
+                return;
+            }
+
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4" style="color: #000000 !important;">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Reutilizar instância do modal para melhor performance
+            const modalElement = document.getElementById('galleryModal');
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (!modalInstance) {
+                modalInstance = new bootstrap.Modal(modalElement);
+            }
+            modalInstance.show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assentos - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- CSS Universal para Modais -->
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item active" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-chair me-3 text-warning"></i>
+                        Assentos Sob Medida
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Conforto e design em cada peça. Bancos, poltronas, cadeiras e assentos personalizados que combinam ergonomia, estilo e qualidade artesanal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Assentos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Móveis para Sentar</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, dimensões e especificações de conforto</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Poltrona Executiva -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Poltrona Executiva" class="gallery-img">
+                            <div class="material-badge">Couro + Madeira</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Poltrona Executiva</h5>
+                            <p class="card-text">Poltrona em couro legítimo e madeira nobre com design ergonômico, ideal para escritórios e ambientes sofisticados.</p>
+                            <div class="price-tag">A partir de R$ 4.800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banco Jantar -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Banco Jantar" class="gallery-img">
+                            <div class="material-badge">Madeira Maciça</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Banco para Jantar</h5>
+                            <p class="card-text">Banco em madeira maciça com acabamento natural, perfeito para mesas de jantar e refeições em família.</p>
+                            <div class="price-tag">A partir de R$ 1.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cadeira Ergonômica -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cadeira Ergonômica" class="gallery-img">
+                            <div class="material-badge">Mesh + Alumínio</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cadeira Ergonômica</h5>
+                            <p class="card-text">Design moderno com apoio lombar ajustável, tela respirável e base em alumínio para longas jornadas de trabalho.</p>
+                            <div class="price-tag">A partir de R$ 2.600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poltrona de Leitura -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Poltrona de Leitura" class="gallery-img">
+                            <div class="material-badge">Tecido + Espuma</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Poltrona de Leitura</h5>
+                            <p class="card-text">Conforto supremo com estofado premium e apoio para os pés, ideal para momentos de relaxamento e leitura.</p>
+                            <div class="price-tag">A partir de R$ 3.400</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banco Industrial -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Banco Industrial" class="gallery-img">
+                            <div class="material-badge">Aço + Madeira</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Banco Industrial</h5>
+                            <p class="card-text">Estilo urbano com estrutura metálica e assento em madeira de demolição, perfeito para ambientes modernos.</p>
+                            <div class="price-tag">A partir de R$ 980</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cadeira Vintage -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cadeira Vintage" class="gallery-img">
+                            <div class="material-badge">Madeira + Palhinha</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cadeira Vintage</h5>
+                            <p class="card-text">Charme retrô com assento em palhinha natural e estrutura em madeira torneada, para ambientes aconchegantes.</p>
+                            <div class="price-tag">A partir de R$ 1.800</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Especialidade:</strong> Conforto que abraça cada momento</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <p class="text-center mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        const assentosData = {
+            'poltrona-executiva': {
+                title: 'Poltrona Executiva',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 4.800',
+                description: 'Poltrona executiva em couro legítimo e madeira nobre com design ergonômico, desenvolvida para profissionais que valorizam conforto e elegância.',
+                materials: [
+                    'Couro bovino legítimo premium',
+                    'Estrutura madeira mogno maciço',
+                    'Espuma density 45 alta durabilidade',
+                    'Molas ensacadas individuais',
+                    'Mecanismo reclinável premium',
+                    'Base giratória com rodízios',
+                    'Braços estofados anatômicos',
+                    'Acabamento verniz poliuretano'
+                ],
+                includes: [
+                    'Poltrona com mecanismo reclinável',
+                    'Apoio lombar ajustável',
+                    'Braços estofados anatômicos',
+                    'Base giratória 5 pés',
+                    'Rodízios silenciosos (5x)',
+                    'Regulagem altura pneumática',
+                    'Kit limpeza couro',
+                    'Manual de conservação'
+                ],
+                warranty: '5 anos estrutura e mecanismo',
+                delivery: '45 a 60 dias úteis'
+            },
+            'banco-jantar': {
+                title: 'Banco para Jantar',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 1.200',
+                description: 'Banco em madeira maciça com acabamento natural, projetado para harmonizar com mesas de jantar e proporcionar conforto nas refeições.',
+                materials: [
+                    'Madeira jatobá maciça selecionada',
+                    'Assento ergonômico curvado',
+                    'Verniz natural fosco',
+                    'Tratamento anti-cupim',
+                    'Juntas reforçadas cola PVA',
+                    'Acabamento lixa 220',
+                    'Pés com proteção antirisco'
+                ],
+                includes: [
+                    'Banco 1,20m (3 lugares)',
+                    'Assento ergonômico',
+                    'Proteção para piso (4x)',
+                    'Kit retoque verniz',
+                    'Manual de conservação',
+                    'Cera natural para manutenção'
+                ],
+                warranty: '3 anos madeira maciça',
+                delivery: '30 a 40 dias úteis'
+            },
+            'cadeira-ergonomica': {
+                title: 'Cadeira Ergonômica',
+                image: 'https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 2.600',
+                description: 'Cadeira de escritório com design moderno e recursos ergonômicos avançados, ideal para longas jornadas de trabalho com máximo conforto.',
+                materials: [
+                    'Encosto tela mesh respirável',
+                    'Assento espuma memory foam',
+                    'Estrutura alumínio anodizado',
+                    'Mecanismo sincronizado premium',
+                    'Apoio lombar ajustável 4D',
+                    'Braços reguláveis multidirecionais',
+                    'Base alumínio polido',
+                    'Rodízios duplos silenciosos'
+                ],
+                includes: [
+                    'Cadeira ergonômica completa',
+                    'Apoio lombar 4D ajustável',
+                    'Braços multidirecionais',
+                    'Regulagem altura pneumática',
+                    'Mecanismo sincronizado',
+                    'Apoio cabeça removível',
+                    'Manual de ajustes',
+                    'Garantia estendida'
+                ],
+                warranty: '3 anos mecanismo',
+                delivery: '25 a 35 dias úteis'
+            },
+            'poltrona-leitura': {
+                title: 'Poltrona de Leitura',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 3.400',
+                description: 'Poltrona projetada para momentos de relaxamento e leitura, com estofado premium e design que convida ao descanso e contemplação.',
+                materials: [
+                    'Tecido performance antimanchas',
+                    'Espuma viscoelástica density 50',
+                    'Estrutura madeira reflorestada',
+                    'Molas zig-zag reforçadas',
+                    'Apoio pés retrátil integrado',
+                    'Costura dupla reforçada',
+                    'Enchimento fibra siliconizada'
+                ],
+                includes: [
+                    'Poltrona reclinável comfort',
+                    'Apoio pés retrátil',
+                    'Almofadas de apoio (2x)',
+                    'Tecido antimanchas',
+                    'Manual de limpeza',
+                    'Kit proteção tecido',
+                    'Garantia comfort'
+                ],
+                warranty: '3 anos estofado',
+                delivery: '35 a 45 dias úteis'
+            },
+            'banco-industrial': {
+                title: 'Banco Industrial',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 980',
+                description: 'Design urbano autêntico com estrutura metálica robusta e assento em madeira de demolição, perfeito para ambientes industriais modernos.',
+                materials: [
+                    'Estrutura tubo aço carbono 2"',
+                    'Assento madeira demolição tratada',
+                    'Pintura epóxi texturizada',
+                    'Soldas estruturais polidas',
+                    'Proteção antioxidante',
+                    'Parafusos inox aparentes',
+                    'Base antiderrapante'
+                ],
+                includes: [
+                    'Banco altura 75cm',
+                    'Assento madeira de demolição',
+                    'Estrutura metálica robusta',
+                    'Proteção antiderrapante',
+                    'Kit retoque tinta',
+                    'Manual de manutenção'
+                ],
+                warranty: '2 anos estrutura',
+                delivery: '20 a 30 dias úteis'
+            },
+            'cadeira-vintage': {
+                title: 'Cadeira Vintage',
+                image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 1.800',
+                description: 'Charme retrô com assento em palhinha natural e estrutura torneada, resgatando a tradição da marcenaria clássica com toque contemporâneo.',
+                materials: [
+                    'Madeira cumaru torneada à mão',
+                    'Assento palhinha natural trançada',
+                    'Verniz shellac tradicional',
+                    'Juntas encaixe macho-fêmea',
+                    'Acabamento lixa 400',
+                    'Palhinha importada premium',
+                    'Tratamento natural anti-insetos'
+                ],
+                includes: [
+                    'Cadeira vintage artesanal',
+                    'Assento palhinha natural',
+                    'Estrutura torneada à mão',
+                    'Proteção para piso (4x)',
+                    'Kit manutenção palhinha',
+                    'Manual conservação',
+                    'Certificado autenticidade'
+                ],
+                warranty: '4 anos madeira e palhinha',
+                delivery: '40 a 55 dias úteis'
+            }
+        };
+
+        function openGallery(productId) {
+            const product = assentosData[productId];
+            
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product || productId === '') {
+                const fallbackData = {
+                    title: 'Assento Personalizado',
+                    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Assento planejado sob medida com acabamentos de qualidade e design ergonômico.',
+                    materials: ['MDF de alta densidade', 'Estofamento premium', 'Espuma D33', 'Tecido resistente'],
+                    includes: ['Projeto 3D personalizado', 'Instalação completa incluída', 'Garantia de 2 anos', 'Manutenção'],
+                    warranty: '2 anos de garantia completa',
+                    delivery: '25 dias úteis para entrega'
+                };
+                
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4" style="color: #000000 !important;">${fallbackData.description}</p>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Reutilizar instância do modal para melhor performance
+                const modalElement = document.getElementById('galleryModal');
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (!modalInstance) {
+                    modalInstance = new bootstrap.Modal(modalElement);
+                }
+                modalInstance.show();
+                return;
+            }
+
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4" style="color: #000000 !important;">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Reutilizar instância do modal para melhor performance
+            const modalElement = document.getElementById('galleryModal');
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (!modalInstance) {
+                modalInstance = new bootstrap.Modal(modalElement);
+            }
+            modalInstance.show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

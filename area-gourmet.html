@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Gourmet - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- CSS Universal para Modais -->
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item active" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-utensils me-3 text-warning"></i>
+                        Área Gourmet Planejada
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Crie o espaço perfeito para receber amigos e família com nossas soluções completas para área gourmet, combinando funcionalidade, durabilidade e design sofisticado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Áreas Gourmet -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Projetos de Área Gourmet</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique em qualquer imagem para ver detalhes completos dos materiais e especificações técnicas</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Área Gourmet Completa -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Área Gourmet Completa" class="gallery-img">
+                            <div class="material-badge">Granito + MDF</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Área Gourmet Completa</h5>
+                            <p class="card-text">Projeto completo com churrasqueira integrada, bancada em granito e armários planejados para recepções memoráveis com família e amigos.</p>
+                            <div class="price-tag">A partir de R$ 12.500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bancada Gourmet com Churrasqueira -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bancada com Churrasqueira" class="gallery-img">
+                            <div class="material-badge">Quartzito + Aço</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bancada com Churrasqueira</h5>
+                            <p class="card-text">Bancada em pedra natural quartzito com churrasqueira integrada e sistema de exaustão profissional para maior praticidade.</p>
+                            <div class="price-tag">A partir de R$ 8.900</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Área Gourmet Compacta -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Área Gourmet Compacta" class="gallery-img">
+                            <div class="material-badge">MDF + Inox</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Área Gourmet Compacta</h5>
+                            <p class="card-text">Solução inteligente para espaços menores, maximizando funcionalidade com design moderno e elegante.</p>
+                            <div class="price-tag">A partir de R$ 6.800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bar Gourmet -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bar Gourmet" class="gallery-img">
+                            <div class="material-badge">Madeira + Vidro</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bar Gourmet Sofisticado</h5>
+                            <p class="card-text">Bar elegante com adega climatizada, bancada para drinks e área de preparo sofisticada para momentos especiais.</p>
+                            <div class="price-tag">A partir de R$ 9.500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ilha Gourmet -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ilha Gourmet" class="gallery-img">
+                            <div class="material-badge">Mármore + MDF</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ilha Gourmet Multifuncional</h5>
+                            <p class="card-text">Ilha central multifuncional com cooktop, pia e área de refeições integrada.</p>
+                            <div class="price-tag">A partir de R$ 7.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deck Gourmet -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Deck Gourmet" class="gallery-img">
+                            <div class="material-badge">Madeira + Tijolo</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Deck Gourmet</h5>
+                            <p class="card-text">Área externa com deck de madeira, churrasqueira rústica e bancada para apoio.</p>
+                            <div class="price-tag">A partir de R$ 5.500</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent">
+                                <!-- Conteúdo será preenchido via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Atendimento:</strong><br>Segunda a Sexta, 8h às 18h<br>Sábados, 8h às 12h</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><i class="fab fa-whatsapp me-2" style="color: #25d366;"></i><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><i class="fas fa-envelope me-2" style="color: #e74c3c;"></i><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Redes Sociais</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-instagram me-3" style="color: #E4405F; font-size: 1.2rem;"></i>
+                            <span>@marcenaria_artesanal</span>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-facebook me-3" style="color: #1877F2; font-size: 1.2rem;"></i>
+                            <span>Marcenaria Artesanal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart" style="color: #e74c3c;"></i> para você</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        // Banco de dados com detalhes completos de área gourmet
+        const areaGourmetData = {
+            'area-gourmet-completa': {
+                title: 'Área Gourmet Completa',
+                image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 12.500',
+                description: 'Projeto completo de área gourmet com todos os elementos necessários para criar um espaço de entretenimento perfeito. Ideal para quem ama receber e busca funcionalidade máxima.',
+                materials: [
+                    'Bancada em granito Branco Dallas 3cm',
+                    'Estrutura em MDF 18mm naval',
+                    'Churrasqueira em tijolo refratário',
+                    'Coifa em aço inox 430 com motor',
+                    'Portas em laminado alto brilho',
+                    'Dobradiças Blum com amortecedor',
+                    'Pia em aço inox 304 dupla',
+                    'Torneira gourmet extensível',
+                    'Iluminação LED embutida'
+                ],
+                includes: [
+                    'Churrasqueira completa com grelha',
+                    'Bancada de apoio em granito',
+                    'Armários superiores e inferiores',
+                    'Sistema de exaustão profissional',
+                    'Pia dupla com torneira',
+                    'Cooktop a gás 4 bocas',
+                    'Espaço para geladeira',
+                    'Instalação hidráulica e elétrica',
+                    'Projeto 3D detalhado'
+                ],
+                warranty: '3 anos de garantia total',
+                delivery: '45 a 60 dias úteis'
+            },
+            'bancada-churrasqueira': {
+                title: 'Bancada com Churrasqueira',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 8.900',
+                description: 'Bancada em pedra natural com churrasqueira integrada, perfeita para quem prioriza o churrasco e quer um espaço elegante e funcional.',
+                materials: [
+                    'Tampo em quartzito Fusion Extra',
+                    'Estrutura em alvenaria revestida',
+                    'Churrasqueira em aço inox',
+                    'Grelha ajustável em ferro fundido',
+                    'Revestimento em pedra natural',
+                    'Coifa em aço carbono pintado',
+                    'Bancada de apoio lateral',
+                    'Acabamento antichama'
+                ],
+                includes: [
+                    'Churrasqueira em aço inox',
+                    'Bancada em quartzito 2,5m',
+                    'Área de apoio lateral',
+                    'Sistema básico de exaustão',
+                    'Grelha regulável',
+                    'Espeto giratório',
+                    'Gaveta para utensílios',
+                    'Instalação completa'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '35 a 45 dias úteis'
+            },
+            'gourmet-compacta': {
+                title: 'Área Gourmet Compacta',
+                image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 6.800',
+                description: 'Solução inteligente para espaços reduzidos, oferecendo máxima funcionalidade em área mínima. Perfeita para apartamentos e casas com varanda pequena.',
+                materials: [
+                    'MDF 15mm resistente à umidade',
+                    'Laminado melamínico branco',
+                    'Bancada em aço inox escovado',
+                    'Churrasqueira elétrica embutida',
+                    'Portas com acabamento UV',
+                    'Puxadores em alumínio',
+                    'Prateleiras reguláveis',
+                    'Rodapé em PVC'
+                ],
+                includes: [
+                    'Churrasqueira elétrica 220V',
+                    'Bancada compacta 1,8m',
+                    'Armário suspenso',
+                    'Pia pequena com torneira',
+                    'Cooktop 2 bocas',
+                    'Coifa compacta',
+                    'Gavetas organizadoras',
+                    'Manual de uso'
+                ],
+                warranty: '18 meses de garantia',
+                delivery: '25 a 35 dias úteis'
+            },
+            'bar-gourmet': {
+                title: 'Bar Gourmet',
+                image: 'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 9.500',
+                description: 'Bar sofisticado com adega climatizada e área de preparo de drinks. Ideal para degustações e momentos especiais com estilo refinado.',
+                materials: [
+                    'Madeira freijó maciça tratada',
+                    'Tampo em vidro temperado 12mm',
+                    'Adega climatizada embutida',
+                    'Iluminação LED regulável',
+                    'Espelhos bisotados decorativos',
+                    'Prateleiras em vidro',
+                    'Estrutura em aço reforçado',
+                    'Verniz naval protetor'
+                ],
+                includes: [
+                    'Adega para 20 garrafas',
+                    'Bancada alta para drinks',
+                    'Prateleiras para taças',
+                    'Geladeira para bebidas',
+                    'Pia para higienização',
+                    'Espelho decorativo',
+                    'Banquetas (2 unidades)',
+                    'Sistema de iluminação'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '40 a 50 dias úteis'
+            },
+            'ilha-gourmet': {
+                title: 'Ilha Gourmet',
+                image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 7.200',
+                description: 'Ilha central multifuncional que integra preparo, cocção e área de refeições. Perfeita para cozinhas abertas e espaços integrados.',
+                materials: [
+                    'Bancada em mármore Carrara',
+                    'Base em MDF 18mm',
+                    'Cooktop por indução embutido',
+                    'Pia circular em aço inox',
+                    'Gavetas com trilhos telescópicos',
+                    'Acabamento em laca acetinada',
+                    'Tomadas embutidas 220V',
+                    'Rodapé com LED'
+                ],
+                includes: [
+                    'Ilha completa 2,2 x 1,2m',
+                    'Cooktop por indução 4 bocas',
+                    'Pia redonda com torneira',
+                    'Gavetas organizadoras',
+                    'Prateleira inferior',
+                    'Tomadas de apoio',
+                    'Área para banquetas',
+                    'Instalação elétrica'
+                ],
+                warranty: '2 anos de garantia',
+                delivery: '30 a 40 dias úteis'
+            },
+            'deck-gourmet': {
+                title: 'Deck Gourmet',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 5.500',
+                description: 'Área externa rústica com deck de madeira e churrasqueira tradicional. Ideal para quem busca ambiente natural e aconchegante.',
+                materials: [
+                    'Deck em madeira cumaru tratada',
+                    'Churrasqueira em tijolo aparente',
+                    'Bancada em concreto usinado',
+                    'Estrutura em eucalipto tratado',
+                    'Cobertura em telha colonial',
+                    'Impermeabilização completa',
+                    'Parafusos inox 316',
+                    'Verniz marítimo dupla demão'
+                ],
+                includes: [
+                    'Deck de madeira 16m²',
+                    'Churrasqueira tradicional',
+                    'Bancada de apoio',
+                    'Pia externa',
+                    'Torneira jardim',
+                    'Grelha de ferro fundido',
+                    'Cobertura parcial',
+                    'Drenagem de águas'
+                ],
+                warranty: '1 ano de garantia',
+                delivery: '20 a 30 dias úteis'
+            }
+        };
+
+        // Função para abrir galeria (versão universal que funciona com IDs vazios)
+        function openGallery(productId) {
+            const product = areaGourmetData[productId];
+            
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product || productId === '') {
+                const fallbackData = {
+                    title: 'Área Gourmet Personalizada',
+                    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Área gourmet planejada sob medida com acabamentos de qualidade e design exclusivo para suas confraternizações.',
+                    materials: ['Bancada em granito natural', 'Armários em MDF com acabamento UV', 'Churrasqueira em tijolo refratário', 'Sistema de exaustão profissional'],
+                    includes: ['Projeto 3D personalizado', 'Instalação completa incluída', 'Garantia de 2 anos', 'Manutenção pós-venda'],
+                    warranty: '2 anos de garantia completa',
+                    delivery: '45 dias úteis para entrega'
+                };
+                
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4">${fallbackData.description}</p>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li>${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Reutilizar instância do modal para melhor performance
+                const modalElement = document.getElementById('galleryModal');
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (!modalInstance) {
+                    modalInstance = new bootstrap.Modal(modalElement);
+                }
+                modalInstance.show();
+                return;
+            }
+
+            // Atualizar modal com dados específicos
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            // Criar conteúdo detalhado
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li>${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Reutilizar instância do modal para melhor performance
+            const modalElement = document.getElementById('galleryModal');
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (!modalInstance) {
+                modalInstance = new bootstrap.Modal(modalElement);
+            }
+            modalInstance.show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

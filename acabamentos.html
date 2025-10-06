@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acabamentos - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item active" href="acabamentos.html">Acabamentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-gem me-3 text-warning"></i>
+                        Acabamentos Premium
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Os detalhes finais que fazem toda a diferença. Puxadores, ferragens, iluminação e acabamentos de alta qualidade que conferem sofisticação e durabilidade aos seus móveis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Acabamentos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Acabamentos & Ferragens</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, especificações técnicas e garantias</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Puxadores Premium -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('puxadores-premium')">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Puxadores Premium" class="gallery-img">
+                            <div class="material-badge">Inox + Bronze</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Puxadores Premium</h5>
+                            <p class="card-text">Coleção exclusiva em aço inox escovado, bronze antigo e alumínio anodizado com design contemporâneo e durabilidade superior.</p>
+                            <div class="price-tag">A partir de R$ 45</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Iluminação LED -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('iluminacao-led')">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Iluminação LED" class="gallery-img">
+                            <div class="material-badge">LED + Dimmer</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Iluminação LED</h5>
+                            <p class="card-text">Sistemas de iluminação integrados com fitas LED, spots embutidos e controle dimmer para criar ambientes únicos.</p>
+                            <div class="price-tag">A partir de R$ 280</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dobradiças Blum -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('dobradicas-blum')">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dobradiças Blum" class="gallery-img">
+                            <div class="material-badge">Blum Austriaca</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dobradiças Blum</h5>
+                            <p class="card-text">Ferragens austríacas de precisão com fechamento suave, amortecedor integrado e durabilidade testada para 200.000 ciclos.</p>
+                            <div class="price-tag">A partir de R$ 120</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trilhos Telescópicos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('trilhos-telescopicos')">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trilhos Telescópicos" class="gallery-img">
+                            <div class="material-badge">Soft Close</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Trilhos Telescópicos</h5>
+                            <p class="card-text">Sistema deslizante silencioso com fechamento automático suave, capacidade até 45kg e extensão total das gavetas.</p>
+                            <div class="price-tag">A partir de R$ 180</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bordas e Fitas -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('bordas-fitas')">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bordas e Fitas" class="gallery-img">
+                            <div class="material-badge">PVC + ABS</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bordas e Fitas</h5>
+                            <p class="card-text">Acabamento perfeito com fitas de borda em PVC e ABS, aplicação profissional com cola hot-melt de alta aderência.</p>
+                            <div class="price-tag">A partir de R$ 25</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidros Temperados -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('vidros-temperados')">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vidros Temperados" class="gallery-img">
+                            <div class="material-badge">Temperado + Serigrafado</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Vidros Temperados</h5>
+                            <p class="card-text">Vidros de segurança temperados com opções cristal, fumê, bronze e serigrafados para portas e prateleiras especiais.</p>
+                            <div class="price-tag">A partir de R$ 85</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Atendimento:</strong><br>Segunda a Sexta, 8h às 18h<br>Sábados, 8h às 12h</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><i class="fab fa-whatsapp me-2" style="color: #25d366;"></i><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><i class="fas fa-envelope me-2" style="color: #e74c3c;"></i><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-share-alt me-2"></i>Redes Sociais</h5>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-instagram me-3" style="color: #E4405F; font-size: 1.2rem;"></i>
+                            <span>@marcenaria_artesanal</span>
+                        </a>
+                        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                            <i class="fab fa-facebook me-3" style="color: #1877F2; font-size: 1.2rem;"></i>
+                            <span>Marcenaria Artesanal</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Desenvolvido com <i class="fas fa-heart" style="color: #e74c3c;"></i> para você</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        const acabamentosData = {
+            'puxadores-premium': {
+                title: 'Puxadores Premium',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 45',
+                description: 'Coleção exclusiva de puxadores em materiais nobres com design contemporâneo. Disponíveis em diversos tamanhos, acabamentos e estilos para harmonizar com qualquer projeto.',
+                materials: [
+                    'Aço inox 304 escovado',
+                    'Bronze antigo patinado',
+                    'Alumínio anodizado fosco',
+                    'Liga zamac cromada',
+                    'Madeira maciça torneada',
+                    'Couro legítimo costurado',
+                    'Acabamento anti-manchas',
+                    'Parafusos inox inclusos'
+                ],
+                includes: [
+                    'Puxador acabamento premium',
+                    'Parafusos fixação inox',
+                    'Gabarito instalação',
+                    'Manual de conservação',
+                    'Garantia contra oxidação',
+                    'Possibilidade personalização',
+                    'Certificado de qualidade'
+                ],
+                warranty: '5 anos anti-oxidação',
+                delivery: '7 a 15 dias úteis'
+            },
+            'iluminacao-led': {
+                title: 'Iluminação LED',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 280',
+                description: 'Sistemas completos de iluminação LED integrados com controle inteligente, eficiência energética e vida útil estendida para valorizar seus móveis.',
+                materials: [
+                    'Fita LED SMD 2835 alta eficiência',
+                    'Driver bivolt estabilizado',
+                    'Perfil alumínio difusor',
+                    'Controlador dimmer touch',
+                    'Sensor presença opcional',
+                    'Cabo alimentação blindado',
+                    'Conectores estanques IP65',
+                    'Transformador isolado'
+                ],
+                includes: [
+                    'Kit fita LED 5 metros',
+                    'Driver bivolt automático',
+                    'Dimmer touch regulável',
+                    'Perfil alumínio com difusor',
+                    'Conectores e emendas',
+                    'Manual instalação técnico',
+                    'App controle smartphone',
+                    'Suporte técnico 2 anos'
+                ],
+                warranty: '3 anos LED e eletrônicos',
+                delivery: '10 a 20 dias úteis'
+            },
+            'dobradicas-blum': {
+                title: 'Dobradiças Blum',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 120',
+                description: 'Ferragens austríacas de precisão mundialmente reconhecidas pela qualidade superior, durabilidade e tecnologia de fechamento suave integrada.',
+                materials: [
+                    'Liga especial anti-corrosão',
+                    'Acabamento níquel acetinado',
+                    'Amortecedor hidráulico integrado',
+                    'Molas temperadas alemãs',
+                    'Regulagem tridimensional',
+                    'Parafusos torx inclusos',
+                    'Teste 200.000 ciclos',
+                    'Certificação TÜV'
+                ],
+                includes: [
+                    'Dobradiça Blum com amortecedor',
+                    'Base fixação regulável',
+                    'Parafusos torx originais',
+                    'Gabarito furação 35mm',
+                    'Manual técnico ilustrado',
+                    'Garantia internacional',
+                    'Suporte técnico Blum'
+                ],
+                warranty: '10 anos fabricante',
+                delivery: '5 a 12 dias úteis'
+            },
+            'trilhos-telescopicos': {
+                title: 'Trilhos Telescópicos',
+                image: 'https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 180',
+                description: 'Sistema deslizante de alta precisão com fechamento automático suave, extensão total e capacidade de carga superior para gavetas profissionais.',
+                materials: [
+                    'Aço estampado reforçado',
+                    'Esferas aço carbono temperado',
+                    'Amortecedor soft-close integrado',
+                    'Zincagem branca anti-corrosão',
+                    'Extensão total 100%',
+                    'Capacidade carga 45kg',
+                    'Regulagem lateral precisa',
+                    'Teste 100.000 ciclos'
+                ],
+                includes: [
+                    'Par trilhos telescópicos',
+                    'Sistema soft-close integrado',
+                    'Parafusos fixação inclusos',
+                    'Regulagem lateral',
+                    'Manual instalação detalhado',
+                    'Gabarito de montagem',
+                    'Garantia funcionamento'
+                ],
+                warranty: '5 anos mecanismo',
+                delivery: '8 a 18 dias úteis'
+            },
+            'bordas-fitas': {
+                title: 'Bordas e Fitas',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 25',
+                description: 'Acabamento profissional com fitas de borda de alta qualidade, aplicação com equipamento industrial e cola hot-melt de aderência permanente.',
+                materials: [
+                    'Fita PVC texturizada 0,8mm',
+                    'Fita ABS lisa 1,0mm',
+                    'Cola hot-melt EVA',
+                    'Aplicação máquina industrial',
+                    'Acabamento fresa diamantada',
+                    'Cantos arredondados',
+                    'Resistência UV e umidade',
+                    'Cores personalizadas'
+                ],
+                includes: [
+                    'Aplicação fita metro linear',
+                    'Cola hot-melt premium',
+                    'Acabamento industrial',
+                    'Cantos arredondados',
+                    'Fresa diamantada',
+                    'Teste aderência',
+                    'Garantia contra descolamento'
+                ],
+                warranty: '3 anos aderência',
+                delivery: '3 a 7 dias úteis'
+            },
+            'vidros-temperados': {
+                title: 'Vidros Temperados',
+                image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 85',
+                description: 'Vidros de segurança temperados com alta resistência, disponíveis em diversas espessuras, cores e acabamentos especiais sob medida.',
+                materials: [
+                    'Vidro float cristal 6mm',
+                    'Temperagem forno controlado',
+                    'Resistência 5x maior comum',
+                    'Bordas polidas lapidadas',
+                    'Opções fumê e bronze',
+                    'Serigrafado personalizado',
+                    'Furação precisão CNC',
+                    'Certificação NBR 14698'
+                ],
+                includes: [
+                    'Vidro temperado sob medida',
+                    'Bordas polidas lapidadas',
+                    'Furação para ferragens',
+                    'Certificado de temperagem',
+                    'Embalagem proteção',
+                    'Entrega e instalação',
+                    'Seguro durante transporte'
+                ],
+                warranty: '5 anos temperagem',
+                delivery: '15 a 25 dias úteis'
+            }
+        };
+
+        function openGallery(productId) {
+            const product = acabamentosData[productId];
+            if (!product) return;
+
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li>${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            new bootstrap.Modal(document.getElementById('galleryModal')).show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

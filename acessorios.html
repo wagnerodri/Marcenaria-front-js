@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessórios - Marcenaria Artesanal</title>
+    
+    <!-- Bootstrap & Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- CSS Universal para Modais -->
+</head>
+<body>
+    <!-- Navegação Principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-hammer me-2"></i>Marcenaria Artesanal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ambientesDropdown" role="button" data-bs-toggle="dropdown">
+                            Ambientes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="dormitorios.html">Dormitórios</a></li>
+                            <li><a class="dropdown-item" href="area-gourmet.html">Área Gourmet</a></li>
+                            <li><a class="dropdown-item" href="cozinha.html">Cozinha</a></li>
+                            <li><a class="dropdown-item" href="sala-estar.html">Sala de Estar</a></li>
+                            <li><a class="dropdown-item" href="home-office.html">Home Office</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moveisDropdown" role="button" data-bs-toggle="dropdown">
+                            Móveis
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="armazenamento.html">Armazenamento</a></li>
+                            <li><a class="dropdown-item" href="mesas-bancadas.html">Mesas & Bancadas</a></li>
+                            <li><a class="dropdown-item" href="assentos.html">Assentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="complementosDropdown" role="button" data-bs-toggle="dropdown">
+                            Complementos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="acessorios.html">Acessórios</a></li>
+                            <li><a class="dropdown-item" href="acabamentos.html">Acabamentos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="processo.html">Nosso Processo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" style="color: #1a1a2e;">
+                        <i class="fas fa-puzzle-piece me-3 text-warning"></i>
+                        Acessórios Decorativos
+                    </h1>
+                    <p class="lead" style="color: #4a5568;">
+                        Detalhes que fazem a diferença. Nichos, prateleiras, caixas de ar e elementos decorativos que completam e personalizam cada ambiente da sua casa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Acessórios -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="text-center fw-bold mb-4" style="color: #ffffff; background: linear-gradient(135deg, #1a1a2e 0%, #2d3748 100%); padding: 20px; border-radius: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Acessórios & Complementos</h2>
+                    <p class="text-center" style="color: #ffffff; font-size: 1.1rem; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.7);">Clique nas imagens para conhecer materiais, dimensões e especificações decorativas</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Nichos Flutuantes -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nichos Flutuantes" class="gallery-img">
+                            <div class="material-badge">MDF + LED</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Nichos Flutuantes</h5>
+                            <p class="card-text">Nichos suspensos com iluminação LED integrada, perfeitos para exibir objetos decorativos e criar pontos de destaque.</p>
+                            <div class="price-tag">A partir de R$ 380</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prateleiras Suspensas -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Prateleiras Suspensas" class="gallery-img">
+                            <div class="material-badge">Madeira + Cabo</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Prateleiras Suspensas</h5>
+                            <p class="card-text">Design moderno com cabo de aço e madeira maciça, ideais para livros, plantas e decoração com estilo industrial.</p>
+                            <div class="price-tag">A partir de R$ 280</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Caixas de Ar -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Caixas de Ar" class="gallery-img">
+                            <div class="material-badge">MDF + Rattan</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Caixas de Ar</h5>
+                            <p class="card-text">Elementos funcionais para esconder equipamentos de ar condicionado com design elegante e ventilação otimizada.</p>
+                            <div class="price-tag">A partir de R$ 680</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painéis Decorativos -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Painéis Decorativos" class="gallery-img">
+                            <div class="material-badge">3D + Textura</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Painéis Decorativos</h5>
+                            <p class="card-text">Revestimentos 3D texturizados que criam profundidade visual e sofisticação em paredes e ambientes especiais.</p>
+                            <div class="price-tag">A partir de R$ 580</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divisórias Vazadas -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Divisórias Vazadas" class="gallery-img">
+                            <div class="material-badge">MDF + Laser</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Divisórias Vazadas</h5>
+                            <p class="card-text">Separadores de ambiente com recortes a laser, mantendo integração visual e criando zonas funcionais distintas.</p>
+                            <div class="price-tag">A partir de R$ 1.200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizadores Gavetas -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card gallery-card" onclick="openGallery('')" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Organizadores Gavetas" class="gallery-img">
+                            <div class="material-badge">Bambu + Feltro</div>
+                            <div class="overlay-zoom">
+                                <i class="fas fa-search-plus me-2"></i>Ver Detalhes
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Organizadores de Gavetas</h5>
+                            <p class="card-text">Sistemas modulares em bambu para organizar talheres, utensílios e pequenos objetos com elegância sustentável.</p>
+                            <div class="price-tag">A partir de R$ 180</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal da Galeria -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="galleryModalLabel">Detalhes do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img id="modalImage" src="" alt="" class="img-fluid modal-image rounded">
+                        </div>
+                        <div class="col-lg-5">
+                            <div id="modalContent"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wa.me/11932563211" class="btn btn-success btn-lg" target="_blank">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Solicitar Orçamento
+                    </a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background: #1a1a2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-hammer me-2"></i>Marcenaria Artesanal</h5>
+                    <p>Qualidade, tradição e inovação em cada projeto.</p>
+                    <p><strong>Especialidade:</strong> Detalhes que personalizam seu espaço</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <h5><i class="fas fa-phone me-2"></i>Entre em Contato</h5>
+                    <p><strong>WhatsApp:</strong> (11) 93256-3211</p>
+                    <p><strong>Email:</strong> warodri1@gmail.com</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2);">
+            <p class="text-center mb-0">&copy; 2025 Marcenaria Artesanal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/enhanced-animations.js"></script>
+    
+    <script>
+        const acessoriosData = {
+            'nichos-flutuantes': {
+                title: 'Nichos Flutuantes',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 380',
+                description: 'Nichos suspensos com iluminação LED integrada, projetados para exibir objetos decorativos e criar pontos de destaque únicos em qualquer ambiente.',
+                materials: [
+                    'MDF 15mm alta densidade',
+                    'Laminado melamínico branco',
+                    'Sistema fixação invisível',
+                    'Fita LED 3000K integrada',
+                    'Driver bivolt automático',
+                    'Bordas seladas PVC',
+                    'Furação traseira para cabos',
+                    'Suporte parede até 15kg'
+                ],
+                includes: [
+                    'Nicho 40x20x15cm',
+                    'Sistema fixação invisível',
+                    'Fita LED 3000K integrada',
+                    'Driver e fonte bivolt',
+                    'Interruptor touch dimmer',
+                    'Parafusos e buchas',
+                    'Gabarito de instalação',
+                    'Manual técnico'
+                ],
+                warranty: '2 anos LED e eletrônicos',
+                delivery: '15 a 20 dias úteis'
+            },
+            'prateleiras-suspensas': {
+                title: 'Prateleiras Suspensas',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 280',
+                description: 'Design industrial moderno com cabo de aço e madeira maciça, ideais para livros, plantas e decoração com estilo contemporâneo urbano.',
+                materials: [
+                    'Prateleira pinus 3cm tratado',
+                    'Cabo aço inox 316 3mm',
+                    'Grampos tensores ajustáveis',
+                    'Verniz poliuretano fosco',
+                    'Fixações parede reforçadas',
+                    'Acabamento bordas arredondadas',
+                    'Tratamento anti-umidade'
+                ],
+                includes: [
+                    'Prateleira 80x25x3cm',
+                    'Cabos aço inox (4x)',
+                    'Grampos tensores reguláveis',
+                    'Fixações parede robustas',
+                    'Parafusos e buchas',
+                    'Gabarito instalação',
+                    'Manual de montagem'
+                ],
+                warranty: '3 anos madeira tratada',
+                delivery: '12 a 18 dias úteis'
+            },
+            'caixas-ar': {
+                title: 'Caixas de Ar',
+                image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 680',
+                description: 'Elementos funcionais que escondem equipamentos de ar condicionado com design elegante, ventilação otimizada e acesso para manutenção.',
+                materials: [
+                    'Estrutura MDF 18mm naval',
+                    'Revestimento rattan sintético',
+                    'Grelhas ventilação ajustáveis',
+                    'Sistema abertura frontal',
+                    'Dobradiças piano silenciosas',
+                    'Vedação anti-vibração',
+                    'Acabamento resistente UV'
+                ],
+                includes: [
+                    'Caixa sob medida equipamento',
+                    'Grelhas ventilação (4x)',
+                    'Sistema abertura frontal',
+                    'Isolamento acústico',
+                    'Fixação estrutural parede',
+                    'Manual manutenção',
+                    'Garantia funcionamento'
+                ],
+                warranty: '2 anos estrutura',
+                delivery: '25 a 35 dias úteis'
+            },
+            'paineis-decorativos': {
+                title: 'Painéis Decorativos',
+                image: 'https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 580',
+                description: 'Revestimentos 3D texturizados que criam profundidade visual e sofisticação, transformando paredes em elementos arquitetônicos marcantes.',
+                materials: [
+                    'MDF 6mm fresado CNC',
+                    'Desenho geométrico exclusivo',
+                    'Acabamento laca acetinada',
+                    'Sistema encaixe modular',
+                    'Base preparada para pintura',
+                    'Cortes precisão milimétrica',
+                    'Possibilidade iluminação traseira'
+                ],
+                includes: [
+                    'Painéis modulares 60x60cm',
+                    'Sistema encaixe invisível',
+                    'Cola estrutural incluída',
+                    'Gabarito de montagem',
+                    'Manual instalação detalhado',
+                    'Suporte técnico',
+                    'Projeto personalizado'
+                ],
+                warranty: '3 anos acabamento',
+                delivery: '30 a 40 dias úteis'
+            },
+            'divisorias-vazadas': {
+                title: 'Divisórias Vazadas',
+                image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 1.200',
+                description: 'Separadores de ambiente com recortes a laser de alta precisão, mantendo integração visual enquanto criam zonas funcionais distintas.',
+                materials: [
+                    'MDF 18mm alta qualidade',
+                    'Corte laser alta precisão',
+                    'Desenho geométrico moderno',
+                    'Estrutura autoportante',
+                    'Base metálica opcional',
+                    'Acabamento laca ou verniz',
+                    'Sistema modular expansível'
+                ],
+                includes: [
+                    'Painel divisória 200x120cm',
+                    'Base estabilizadora',
+                    'Sistema fixação modular',
+                    'Projeto desenho exclusivo',
+                    'Corte laser precisão',
+                    'Acabamento premium',
+                    'Montagem profissional'
+                ],
+                warranty: '3 anos estrutura',
+                delivery: '35 a 50 dias úteis'
+            },
+            'organizadores-gavetas': {
+                title: 'Organizadores de Gavetas',
+                image: 'https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                price: 'A partir de R$ 180',
+                description: 'Sistemas modulares em bambu sustentável para organizar talheres, utensílios e pequenos objetos com elegância natural e funcionalidade.',
+                materials: [
+                    'Bambu certificado sustentável',
+                    'Base feltro antiderrapante',
+                    'Divisórias modulares ajustáveis',
+                    'Acabamento óleo natural',
+                    'Cantos arredondados polidos',
+                    'Sistema encaixe sem cola',
+                    'Tratamento anti-umidade'
+                ],
+                includes: [
+                    'Kit organizador modular',
+                    'Divisórias ajustáveis (8x)',
+                    'Base feltro antiderrapante',
+                    'Manual configurações',
+                    'Possibilidade expansão',
+                    'Óleo natural manutenção',
+                    'Garantia sustentabilidade'
+                ],
+                warranty: '2 anos bambu natural',
+                delivery: '10 a 15 dias úteis'
+            }
+        };
+
+        function openGallery(productId) {
+            const product = acessoriosData[productId];
+            
+            // Se não encontrar o produto específico, usar dados padrão
+            if (!product || productId === '') {
+                const fallbackData = {
+                    title: 'Acessório Personalizado',
+                    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+                    price: 'Consulte preço',
+                    description: 'Acessório planejado sob medida com acabamentos de qualidade e design exclusivo.',
+                    materials: ['MDF de alta densidade', 'Acabamento premium', 'Ferragens especiais', 'Detalhes decorativos'],
+                    includes: ['Projeto personalizado', 'Instalação incluída', 'Garantia de 1 ano', 'Suporte técnico'],
+                    warranty: '1 ano de garantia',
+                    delivery: '20 dias úteis para entrega'
+                };
+                
+                document.getElementById('galleryModalLabel').textContent = fallbackData.title;
+                document.getElementById('modalImage').src = fallbackData.image;
+                document.getElementById('modalImage').alt = fallbackData.title;
+
+                const modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = `
+                    <div class="price-tag mb-3">${fallbackData.price}</div>
+                    <p class="mb-4" style="color: #000000 !important;">${fallbackData.description}</p>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                        <ul class="material-list">
+                            ${fallbackData.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="material-info">
+                        <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                        <ul class="material-list">
+                            ${fallbackData.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.warranty}</strong></p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                                <p class="small mb-0" style="color: #000000 !important;"><strong>${fallbackData.delivery}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Reutilizar instância do modal para melhor performance
+                const modalElement = document.getElementById('galleryModal');
+                let modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (!modalInstance) {
+                    modalInstance = new bootstrap.Modal(modalElement);
+                }
+                modalInstance.show();
+                return;
+            }
+
+            document.getElementById('galleryModalLabel').textContent = product.title;
+            document.getElementById('modalImage').src = product.image;
+            document.getElementById('modalImage').alt = product.title;
+
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="price-tag mb-3">${product.price}</div>
+                <p class="mb-4" style="color: #000000 !important;">${product.description}</p>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-cog me-2"></i>Materiais e Especificações</h6>
+                    <ul class="material-list">
+                        ${product.materials.map(material => `<li style="color: #000000 !important;">${material}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="material-info">
+                    <h6 class="fw-bold mb-3" style="color: #000000 !important;"><i class="fas fa-check-circle me-2"></i>Itens Inclusos</h6>
+                    <ul class="material-list">
+                        ${product.includes.map(item => `<li style="color: #000000 !important;">${item}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt fa-2x text-success mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.warranty}</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center">
+                            <i class="fas fa-truck fa-2x text-primary mb-2"></i>
+                            <p class="small mb-0" style="color: #000000 !important;"><strong>${product.delivery}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Reutilizar instância do modal para melhor performance
+            const modalElement = document.getElementById('galleryModal');
+            let modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (!modalInstance) {
+                modalInstance = new bootstrap.Modal(modalElement);
+            }
+            modalInstance.show();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
